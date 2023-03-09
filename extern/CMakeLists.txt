@@ -45,9 +45,8 @@ FetchContent_MakeAvailable(extern_catch)
 #
 FetchContent_Declare(
   extern_reproc
-  GIT_REPOSITORY git@github.com:DaanDeMeyer/reproc.git
-  GIT_TAG v14.2.4)
-set(REPROC++ ON)
+  GIT_REPOSITORY http://gitlab.com/eidheim/tiny-process-library
+  GIT_TAG v2.0.4)
 FetchContent_MakeAvailable(extern_reproc)
 
 message("INSTALLING DEPENDENCIES DONE")

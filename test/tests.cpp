@@ -1,14 +1,14 @@
 
 #include "catch2/catch_test_macros.hpp"
 #include "fmt/core.h"
+#include "process.hpp"
 
-int factorial(int number) { return number <= 1 ? number : factorial(number - 1) * number; }
+using namespace TinyProcessLib;
 
-TEST_CASE("testing the factorial function")
+
+TEST_CASE("Runs")
 {
-  fmt::print("Tests\n");
-  CHECK(factorial(1) == 1);
-  CHECK(factorial(2) == 2);
-  CHECK(factorial(3) == 6);
-  CHECK(factorial(10) == 3628800);
+  Process process1("../src/cliPlusPlus", "", [](const char *bytes, size_t n) {});
+  auto exit_status = process1.get_exit_status();
+  REQUIRE(process1.get_exit_status() == 0);
 }

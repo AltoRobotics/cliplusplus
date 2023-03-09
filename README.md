@@ -1,14 +1,11 @@
-# skeleton readme
+# Timida reimplementazione delle coreutils
 
-Adapted from https://github.com/lefticus/cpp_starter_project
+In src ci vanno i comandi.
+In test le asserzioni che testano che i comandi siano eseguiti e che l'output sia conforme.
 
-cmake-format example
- cmake-format  -c .cmake-format.yaml -i src/CMakeLists.txt
+Per semplicitá al momento i test che si invocano con 
 
-Use createProject.sh script to create another project 
+    ninja test 
 
-Usage: createProject.sh subdir prjname
-       where subdir is a subdirectory of the localdirectory
+ma cercano gli eseguibili sotto ../src : tenetene conto se modificate la build.
 
-Fish Alias for cninja
- abbr -a -U -- cninja 'cmake -GNinja -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_C_FLAGS="-fuse-ld=lld -gsplit-dwarf" -DCMAKE_CXX_FLAGS="-fuse-ld=lld -gsplit-dwarf"'

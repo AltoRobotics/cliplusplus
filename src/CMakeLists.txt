@@ -8,7 +8,7 @@ target_link_libraries(
   PRIVATE project_options
           project_warnings
           spdlog::spdlog
-          reproc)
+          tiny-process-library)
 target_include_directories(cliPlusPlus PRIVATE ${CMAKE_CURRENT_BINARY_DIR})
 define_file_basename_for_sources(cliPlusPlus)
 

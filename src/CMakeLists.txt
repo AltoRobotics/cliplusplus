@@ -12,6 +12,12 @@ target_link_libraries(
 target_include_directories(cliPlusPlus PRIVATE ${CMAKE_CURRENT_BINARY_DIR})
 define_file_basename_for_sources(cliPlusPlus)
 
+add_executable(true)
+target_sources(true PRIVATE true.cpp)
+
+add_executable(false)
+target_sources(false PRIVATE false.cpp)
+
 # add this only for libraries generate_export_header(cliPlusPlus)
 
 set_target_properties(cliPlusPlus PROPERTIES SOVERSION 1 VERSION 1.0.0)

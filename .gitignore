@@ -38,6 +38,7 @@ install*/
 
 .vscode/
 .clangd/
+.cache/
 
 CMakeLists\.txt\.user
 
